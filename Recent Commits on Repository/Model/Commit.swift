@@ -14,7 +14,7 @@ class Commit {
     var committer: Committer
     
     init(withJSON json: JSON){
-        message = json["message"].stringValue
+        message = json["commit"]["message"].stringValue
         let committer = Committer(withJSON: json["commit"]["committer"])
         committer.username = json["committer"]["login"].stringValue
         committer.avatarLink = json["committer"]["avatar_url"].stringValue

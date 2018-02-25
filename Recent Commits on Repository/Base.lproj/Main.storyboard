@@ -88,6 +88,7 @@
                                             <outlet property="descriptionLabel" destination="hHF-G2-JaJ" id="55e-dw-kgt"/>
                                             <outlet property="ownerNameLabel" destination="tUQ-iU-T52" id="Xfw-kA-uMe"/>
                                             <outlet property="repositoryNameLabel" destination="b6T-tT-KWu" id="2fy-YT-c2F"/>
+                                            <segue destination="cHa-ZH-rcb" kind="show" identifier="showRepositoryDetailSegue" id="qVS-Ho-XUB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -114,6 +115,150 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="237.59999999999999" y="102.99850074962519"/>
+        </scene>
+        <!--Commits On Repository View Controller-->
+        <scene sceneID="b9v-DB-Xr4">
+            <objects>
+                <viewController id="cHa-ZH-rcb" customClass="CommitsOnRepositoryViewController" customModule="Recent_Commits_on_Repository" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eoQ-Gi-p15">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5np-L2-ARB">
+                                <rect key="frame" x="112" y="64" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Fx9-Pg-cGX"/>
+                                    <constraint firstAttribute="width" constant="150" id="Le2-e5-wWr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repository name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZg-wg-1vr">
+                                <rect key="frame" x="0.0" y="222" width="375" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="M0h-Kn-4rn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aMh-n6-VPb">
+                                <rect key="frame" x="0.0" y="341" width="375" height="326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commitViewCellIdentifier" rowHeight="60" id="zBm-1k-2ky" customClass="CommitTableViewCell" customModule="Recent_Commits_on_Repository" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zBm-1k-2ky" id="NmH-qT-Avi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commit message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktC-WU-67n">
+                                                    <rect key="frame" x="76" y="11" width="292" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="iWE-1j-eL4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ecp-Fg-uOl">
+                                                    <rect key="frame" x="8" y="0.0" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="NT4-9H-hLx"/>
+                                                        <constraint firstAttribute="height" constant="60" id="Yfc-mh-OnC"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commiter name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h15-Q1-8B7">
+                                                    <rect key="frame" x="76" y="34" width="291" height="19.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="19.5" id="uCW-pt-mi6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="h15-Q1-8B7" firstAttribute="top" secondItem="ktC-WU-67n" secondAttribute="bottom" constant="2" id="7PF-NK-gLP"/>
+                                                <constraint firstItem="ecp-Fg-uOl" firstAttribute="leading" secondItem="NmH-qT-Avi" secondAttribute="leading" constant="8" id="7n8-EQ-mUm"/>
+                                                <constraint firstItem="ecp-Fg-uOl" firstAttribute="top" secondItem="NmH-qT-Avi" secondAttribute="top" id="8Jw-4Q-vYf"/>
+                                                <constraint firstItem="ktC-WU-67n" firstAttribute="trailing" secondItem="NmH-qT-Avi" secondAttribute="trailingMargin" constant="8" id="JXz-P4-UqB"/>
+                                                <constraint firstItem="ktC-WU-67n" firstAttribute="top" secondItem="NmH-qT-Avi" secondAttribute="topMargin" id="MYa-kf-AbC"/>
+                                                <constraint firstItem="ktC-WU-67n" firstAttribute="leading" secondItem="ecp-Fg-uOl" secondAttribute="trailing" constant="8" id="NNK-rW-glX"/>
+                                                <constraint firstAttribute="bottom" secondItem="ecp-Fg-uOl" secondAttribute="bottom" id="bur-P8-CvN"/>
+                                                <constraint firstAttribute="trailing" secondItem="h15-Q1-8B7" secondAttribute="trailing" constant="8" id="jSw-44-x7i"/>
+                                                <constraint firstItem="h15-Q1-8B7" firstAttribute="leading" secondItem="ecp-Fg-uOl" secondAttribute="trailing" constant="8" id="raZ-Jj-fZf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commitMessageLabel" destination="ktC-WU-67n" id="Odi-fA-gdK"/>
+                                            <outlet property="commiterNameLabel" destination="h15-Q1-8B7" id="xpB-13-5mQ"/>
+                                            <outlet property="committerAvatar" destination="ecp-Fg-uOl" id="1tD-HM-C2a"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ownername" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtP-FE-QhJ">
+                                <rect key="frame" x="0.0" y="254" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dvR-M6-UUb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk1-t7-Zm4">
+                                <rect key="frame" x="0.0" y="283" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HMH-Ep-vfR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent commits: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDr-aW-Qbr">
+                                <rect key="frame" x="0.0" y="312" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Div-X2-7WX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FZg-wg-1vr" firstAttribute="leading" secondItem="fe0-ho-I1a" secondAttribute="leading" id="0PZ-Qy-6UU"/>
+                            <constraint firstItem="GDr-aW-Qbr" firstAttribute="top" secondItem="mk1-t7-Zm4" secondAttribute="bottom" constant="8" id="AKB-u5-ifb"/>
+                            <constraint firstItem="fe0-ho-I1a" firstAttribute="trailing" secondItem="TtP-FE-QhJ" secondAttribute="trailing" id="BJl-JS-EgW"/>
+                            <constraint firstItem="aMh-n6-VPb" firstAttribute="bottom" secondItem="fe0-ho-I1a" secondAttribute="bottom" id="EJ3-tJ-VKT"/>
+                            <constraint firstItem="mk1-t7-Zm4" firstAttribute="leading" secondItem="fe0-ho-I1a" secondAttribute="leading" id="FH8-eA-RgB"/>
+                            <constraint firstItem="5np-L2-ARB" firstAttribute="centerX" secondItem="eoQ-Gi-p15" secondAttribute="centerX" id="I0i-yG-233"/>
+                            <constraint firstItem="aMh-n6-VPb" firstAttribute="top" secondItem="GDr-aW-Qbr" secondAttribute="bottom" constant="8" id="Jwd-Ec-ZXX"/>
+                            <constraint firstItem="aMh-n6-VPb" firstAttribute="trailing" secondItem="fe0-ho-I1a" secondAttribute="trailing" id="LQn-bl-dXb"/>
+                            <constraint firstItem="5np-L2-ARB" firstAttribute="top" secondItem="fe0-ho-I1a" secondAttribute="top" id="Q0s-FN-9Et"/>
+                            <constraint firstItem="aMh-n6-VPb" firstAttribute="leading" secondItem="fe0-ho-I1a" secondAttribute="leading" id="U6S-8c-Pn5"/>
+                            <constraint firstItem="fe0-ho-I1a" firstAttribute="trailing" secondItem="mk1-t7-Zm4" secondAttribute="trailing" id="VZm-xs-p3u"/>
+                            <constraint firstItem="GDr-aW-Qbr" firstAttribute="leading" secondItem="fe0-ho-I1a" secondAttribute="leading" id="W4E-sA-Vtr"/>
+                            <constraint firstItem="TtP-FE-QhJ" firstAttribute="top" secondItem="FZg-wg-1vr" secondAttribute="bottom" constant="8" id="bYP-aI-rNX"/>
+                            <constraint firstItem="fe0-ho-I1a" firstAttribute="trailing" secondItem="GDr-aW-Qbr" secondAttribute="trailing" id="bmb-Ba-QRw"/>
+                            <constraint firstItem="TtP-FE-QhJ" firstAttribute="leading" secondItem="fe0-ho-I1a" secondAttribute="leading" id="hb2-8w-ZaS"/>
+                            <constraint firstItem="mk1-t7-Zm4" firstAttribute="top" secondItem="TtP-FE-QhJ" secondAttribute="bottom" constant="8" id="jH8-n0-cFi"/>
+                            <constraint firstItem="fe0-ho-I1a" firstAttribute="trailing" secondItem="FZg-wg-1vr" secondAttribute="trailing" id="lc7-JV-KBw"/>
+                            <constraint firstItem="FZg-wg-1vr" firstAttribute="top" secondItem="5np-L2-ARB" secondAttribute="bottom" constant="8" id="wKj-CL-UG6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fe0-ho-I1a"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="mk1-t7-Zm4" id="9w0-GL-efB"/>
+                        <outlet property="onwerAvatar" destination="5np-L2-ARB" id="t1p-5X-B5V"/>
+                        <outlet property="ownerNameLabel" destination="TtP-FE-QhJ" id="Dei-4m-TD4"/>
+                        <outlet property="repositoryNameLabel" destination="FZg-wg-1vr" id="RlL-4O-8Nw"/>
+                        <outlet property="tableView" destination="aMh-n6-VPb" id="8bV-aF-r9j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQ9-Xf-AdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.60000000000002" y="102.99850074962519"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BK9-ex-gZr">

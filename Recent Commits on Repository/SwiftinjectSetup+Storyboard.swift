@@ -19,12 +19,24 @@ extension SwinjectStoryboard {
             SearchService(client: r.resolve(NetClient.self)!)
         }.inObjectScope(.container)
         
+        defaultContainer.register(CommitService.self) { r  in
+            CommitService(client: r.resolve(NetClient.self)!)
+        }.inObjectScope(.container)
+        
+        defaultContainer.register(CommitViewModelType.self) { r in
+            CommitViewModel(service: r.resolve(CommitService.self)!)
+        }.inObjectScope(.container)
+        
         defaultContainer.register(SearchViewModelType.self){ r in
             SearchViewModel(service: r.resolve(SearchService.self)!)
         }.inObjectScope(.container)
         
         defaultContainer.storyboardInitCompleted(SearchViewController.self) { (r, vc) in
             vc.searchViewModel = r.resolve(SearchViewModelType.self)!
+        }
+        
+        defaultContainer.storyboardInitCompleted(CommitsOnRepositoryViewController.self) { (r,vc) in
+            vc.commitViewModel = r.resolve(CommitViewModelType.self)!
         }
     }
 }

@@ -30,6 +30,8 @@
 		1020141D204228A2004CA5AB /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020141C204228A2004CA5AB /* SearchResultTableViewCell.swift */; };
 		1020141F20422EA7004CA5AB /* SwiftinjectSetup+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020141E20422EA7004CA5AB /* SwiftinjectSetup+Storyboard.swift */; };
 		10A7D6852042385900DB2618 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A7D6842042385900DB2618 /* UIImageView+AlamofireImage.swift */; };
+		10A7D6872043306C00DB2618 /* CommitsOnRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A7D6862043306C00DB2618 /* CommitsOnRepositoryViewController.swift */; };
+		10A7D6892043315800DB2618 /* CommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A7D6882043315800DB2618 /* CommitTableViewCell.swift */; };
 		8D5D9DCD17BC0C098FA811A2 /* Pods_Recent_Commits_on_RepositoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DED190E415E1EE95D1EC34 /* Pods_Recent_Commits_on_RepositoryUITests.framework */; };
 		99A6ECF8C7E80589F3E76963 /* Pods_Recent_Commits_on_RepositoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425AC4AC54E76CE22F75BAF5 /* Pods_Recent_Commits_on_RepositoryTests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +82,8 @@
 		1020141C204228A2004CA5AB /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		1020141E20422EA7004CA5AB /* SwiftinjectSetup+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftinjectSetup+Storyboard.swift"; sourceTree = "<group>"; };
 		10A7D6842042385900DB2618 /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
+		10A7D6862043306C00DB2618 /* CommitsOnRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsOnRepositoryViewController.swift; sourceTree = "<group>"; };
+		10A7D6882043315800DB2618 /* CommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTableViewCell.swift; sourceTree = "<group>"; };
 		41E48F7BAC2C28FCC615B923 /* Pods-Recent Commits on RepositoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recent Commits on RepositoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recent Commits on RepositoryTests/Pods-Recent Commits on RepositoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		425AC4AC54E76CE22F75BAF5 /* Pods_Recent_Commits_on_RepositoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recent_Commits_on_RepositoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF95EE542EDA2D6625F90F8 /* Pods-Recent Commits on Repository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recent Commits on Repository.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recent Commits on Repository/Pods-Recent Commits on Repository.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				1020141820422133004CA5AB /* CommitViewModel.swift */,
+				10A7D6862043306C00DB2618 /* CommitsOnRepositoryViewController.swift */,
+				10A7D6882043315800DB2618 /* CommitTableViewCell.swift */,
 			);
 			path = Commit;
 			sourceTree = "<group>";
@@ -598,7 +604,9 @@
 				1020140C2042198E004CA5AB /* SearchResult.swift in Sources */,
 				102013FF20420B11004CA5AB /* ServiceError.swift in Sources */,
 				1020140A20421647004CA5AB /* Committer.swift in Sources */,
+				10A7D6872043306C00DB2618 /* CommitsOnRepositoryViewController.swift in Sources */,
 				1020140820421639004CA5AB /* Commit.swift in Sources */,
+				10A7D6892043315800DB2618 /* CommitTableViewCell.swift in Sources */,
 				102013D02042082B004CA5AB /* SearchViewController.swift in Sources */,
 				1020141620421D2B004CA5AB /* SearchViewModel.swift in Sources */,
 				10A7D6852042385900DB2618 /* UIImageView+AlamofireImage.swift in Sources */,

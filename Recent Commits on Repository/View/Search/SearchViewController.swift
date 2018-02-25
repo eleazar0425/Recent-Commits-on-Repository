@@ -33,6 +33,18 @@ class SearchViewController: UIViewController {
         searchBar.resignFirstResponder()
         searchBar.endEditing(true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRepositoryDetailSegue" {
+            let selectedRow = tableView.indexPathForSelectedRow?.row
+            guard let results = searchViewModel?.results, let row = selectedRow else {
+                return
+            }
+            let result = results[row]
+            let vc = segue.destination as! CommitsOnRepositoryViewController
+            vc.result = result
+        }
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
@@ -79,4 +91,3 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         //Todo
     }
 }
-
