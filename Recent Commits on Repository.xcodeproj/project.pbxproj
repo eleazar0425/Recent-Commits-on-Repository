@@ -7,13 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BEB59CCBE6EA994231A2353 /* Pods_Recent_Commits_on_Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC82EB2EABD8FF8968FE4AA0 /* Pods_Recent_Commits_on_Repository.framework */; };
 		102013CE2042082B004CA5AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102013CD2042082B004CA5AB /* AppDelegate.swift */; };
-		102013D02042082B004CA5AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102013CF2042082B004CA5AB /* ViewController.swift */; };
+		102013D02042082B004CA5AB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102013CF2042082B004CA5AB /* SearchViewController.swift */; };
 		102013D32042082B004CA5AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102013D12042082B004CA5AB /* Main.storyboard */; };
 		102013D52042082B004CA5AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102013D42042082B004CA5AB /* Assets.xcassets */; };
 		102013D82042082B004CA5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102013D62042082B004CA5AB /* LaunchScreen.storyboard */; };
 		102013E32042082B004CA5AB /* Recent_Commits_on_RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102013E22042082B004CA5AB /* Recent_Commits_on_RepositoryTests.swift */; };
 		102013EE2042082C004CA5AB /* Recent_Commits_on_RepositoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102013ED2042082C004CA5AB /* Recent_Commits_on_RepositoryUITests.swift */; };
+		102013FD2042098E004CA5AB /* NetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102013FC2042098E004CA5AB /* NetClient.swift */; };
+		102013FF20420B11004CA5AB /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102013FE20420B11004CA5AB /* ServiceError.swift */; };
+		1020140120420BD1004CA5AB /* GithubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020140020420BD1004CA5AB /* GithubClient.swift */; };
+		1020140420420E69004CA5AB /* GithbuRepositoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020140320420E69004CA5AB /* GithbuRepositoriesRouter.swift */; };
+		1020140820421639004CA5AB /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020140720421639004CA5AB /* Commit.swift */; };
+		1020140A20421647004CA5AB /* Committer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020140920421647004CA5AB /* Committer.swift */; };
+		1020140C2042198E004CA5AB /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020140B2042198E004CA5AB /* SearchResult.swift */; };
+		1020141020421AA0004CA5AB /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020140F20421AA0004CA5AB /* SearchService.swift */; };
+		1020141220421ACC004CA5AB /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020141120421ACC004CA5AB /* Service.swift */; };
+		1020141620421D2B004CA5AB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020141520421D2B004CA5AB /* SearchViewModel.swift */; };
+		1020141920422133004CA5AB /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020141820422133004CA5AB /* CommitViewModel.swift */; };
+		1020141B204222AC004CA5AB /* CommitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020141A204222AC004CA5AB /* CommitService.swift */; };
+		1020141D204228A2004CA5AB /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020141C204228A2004CA5AB /* SearchResultTableViewCell.swift */; };
+		1020141F20422EA7004CA5AB /* SwiftinjectSetup+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1020141E20422EA7004CA5AB /* SwiftinjectSetup+Storyboard.swift */; };
+		10A7D6852042385900DB2618 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A7D6842042385900DB2618 /* UIImageView+AlamofireImage.swift */; };
+		8D5D9DCD17BC0C098FA811A2 /* Pods_Recent_Commits_on_RepositoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DED190E415E1EE95D1EC34 /* Pods_Recent_Commits_on_RepositoryUITests.framework */; };
+		99A6ECF8C7E80589F3E76963 /* Pods_Recent_Commits_on_RepositoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425AC4AC54E76CE22F75BAF5 /* Pods_Recent_Commits_on_RepositoryTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +54,7 @@
 /* Begin PBXFileReference section */
 		102013CA2042082B004CA5AB /* Recent Commits on Repository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recent Commits on Repository.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		102013CD2042082B004CA5AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		102013CF2042082B004CA5AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		102013CF2042082B004CA5AB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		102013D22042082B004CA5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		102013D42042082B004CA5AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		102013D72042082B004CA5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +65,30 @@
 		102013E92042082C004CA5AB /* Recent Commits on RepositoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recent Commits on RepositoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		102013ED2042082C004CA5AB /* Recent_Commits_on_RepositoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recent_Commits_on_RepositoryUITests.swift; sourceTree = "<group>"; };
 		102013EF2042082C004CA5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		102013FC2042098E004CA5AB /* NetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetClient.swift; sourceTree = "<group>"; };
+		102013FE20420B11004CA5AB /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		1020140020420BD1004CA5AB /* GithubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubClient.swift; sourceTree = "<group>"; };
+		1020140320420E69004CA5AB /* GithbuRepositoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithbuRepositoriesRouter.swift; sourceTree = "<group>"; };
+		1020140720421639004CA5AB /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		1020140920421647004CA5AB /* Committer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Committer.swift; sourceTree = "<group>"; };
+		1020140B2042198E004CA5AB /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		1020140F20421AA0004CA5AB /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		1020141120421ACC004CA5AB /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		1020141520421D2B004CA5AB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		1020141820422133004CA5AB /* CommitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewModel.swift; sourceTree = "<group>"; };
+		1020141A204222AC004CA5AB /* CommitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitService.swift; sourceTree = "<group>"; };
+		1020141C204228A2004CA5AB /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		1020141E20422EA7004CA5AB /* SwiftinjectSetup+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftinjectSetup+Storyboard.swift"; sourceTree = "<group>"; };
+		10A7D6842042385900DB2618 /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
+		41E48F7BAC2C28FCC615B923 /* Pods-Recent Commits on RepositoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recent Commits on RepositoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recent Commits on RepositoryTests/Pods-Recent Commits on RepositoryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		425AC4AC54E76CE22F75BAF5 /* Pods_Recent_Commits_on_RepositoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recent_Commits_on_RepositoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF95EE542EDA2D6625F90F8 /* Pods-Recent Commits on Repository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recent Commits on Repository.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recent Commits on Repository/Pods-Recent Commits on Repository.release.xcconfig"; sourceTree = "<group>"; };
+		64DED190E415E1EE95D1EC34 /* Pods_Recent_Commits_on_RepositoryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recent_Commits_on_RepositoryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A361A63A480E1923EE5552 /* Pods-Recent Commits on RepositoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recent Commits on RepositoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recent Commits on RepositoryUITests/Pods-Recent Commits on RepositoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B2B10401EA4F1AD798EA88E4 /* Pods-Recent Commits on Repository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recent Commits on Repository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recent Commits on Repository/Pods-Recent Commits on Repository.debug.xcconfig"; sourceTree = "<group>"; };
+		C1012B7F25F208DD0592D578 /* Pods-Recent Commits on RepositoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recent Commits on RepositoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recent Commits on RepositoryTests/Pods-Recent Commits on RepositoryTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC82EB2EABD8FF8968FE4AA0 /* Pods_Recent_Commits_on_Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recent_Commits_on_Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE562E56E04D205824ACBB4A /* Pods-Recent Commits on RepositoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recent Commits on RepositoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recent Commits on RepositoryUITests/Pods-Recent Commits on RepositoryUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEB59CCBE6EA994231A2353 /* Pods_Recent_Commits_on_Repository.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A6ECF8C7E80589F3E76963 /* Pods_Recent_Commits_on_RepositoryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D5D9DCD17BC0C098FA811A2 /* Pods_Recent_Commits_on_RepositoryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +126,8 @@
 				102013E12042082B004CA5AB /* Recent Commits on RepositoryTests */,
 				102013EC2042082C004CA5AB /* Recent Commits on RepositoryUITests */,
 				102013CB2042082B004CA5AB /* Products */,
+				C6BDE2DF3CFDE324135E09A0 /* Pods */,
+				128A8EC28B278B1DE33889C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +144,17 @@
 		102013CC2042082B004CA5AB /* Recent Commits on Repository */ = {
 			isa = PBXGroup;
 			children = (
+				10A7D6832042383800DB2618 /* Extensions */,
+				1020141320421D0E004CA5AB /* View */,
+				10201406204215C6004CA5AB /* Model */,
+				10201405204215BB004CA5AB /* Service */,
+				102013FB2042083B004CA5AB /* Net */,
 				102013CD2042082B004CA5AB /* AppDelegate.swift */,
-				102013CF2042082B004CA5AB /* ViewController.swift */,
 				102013D12042082B004CA5AB /* Main.storyboard */,
 				102013D42042082B004CA5AB /* Assets.xcassets */,
 				102013D62042082B004CA5AB /* LaunchScreen.storyboard */,
 				102013D92042082B004CA5AB /* Info.plist */,
+				1020141E20422EA7004CA5AB /* SwiftinjectSetup+Storyboard.swift */,
 			);
 			path = "Recent Commits on Repository";
 			sourceTree = "<group>";
@@ -125,6 +177,103 @@
 			path = "Recent Commits on RepositoryUITests";
 			sourceTree = "<group>";
 		};
+		102013FB2042083B004CA5AB /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				1020140220420E50004CA5AB /* Router */,
+				102013FC2042098E004CA5AB /* NetClient.swift */,
+				102013FE20420B11004CA5AB /* ServiceError.swift */,
+				1020140020420BD1004CA5AB /* GithubClient.swift */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		1020140220420E50004CA5AB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1020140320420E69004CA5AB /* GithbuRepositoriesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		10201405204215BB004CA5AB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1020140F20421AA0004CA5AB /* SearchService.swift */,
+				1020141120421ACC004CA5AB /* Service.swift */,
+				1020141A204222AC004CA5AB /* CommitService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		10201406204215C6004CA5AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1020140720421639004CA5AB /* Commit.swift */,
+				1020140920421647004CA5AB /* Committer.swift */,
+				1020140B2042198E004CA5AB /* SearchResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1020141320421D0E004CA5AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1020141720422119004CA5AB /* Commit */,
+				1020141420421D1E004CA5AB /* Search */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1020141420421D1E004CA5AB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1020141520421D2B004CA5AB /* SearchViewModel.swift */,
+				1020141C204228A2004CA5AB /* SearchResultTableViewCell.swift */,
+				102013CF2042082B004CA5AB /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1020141720422119004CA5AB /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				1020141820422133004CA5AB /* CommitViewModel.swift */,
+			);
+			path = Commit;
+			sourceTree = "<group>";
+		};
+		10A7D6832042383800DB2618 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				10A7D6842042385900DB2618 /* UIImageView+AlamofireImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		128A8EC28B278B1DE33889C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC82EB2EABD8FF8968FE4AA0 /* Pods_Recent_Commits_on_Repository.framework */,
+				425AC4AC54E76CE22F75BAF5 /* Pods_Recent_Commits_on_RepositoryTests.framework */,
+				64DED190E415E1EE95D1EC34 /* Pods_Recent_Commits_on_RepositoryUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6BDE2DF3CFDE324135E09A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2B10401EA4F1AD798EA88E4 /* Pods-Recent Commits on Repository.debug.xcconfig */,
+				4DF95EE542EDA2D6625F90F8 /* Pods-Recent Commits on Repository.release.xcconfig */,
+				41E48F7BAC2C28FCC615B923 /* Pods-Recent Commits on RepositoryTests.debug.xcconfig */,
+				C1012B7F25F208DD0592D578 /* Pods-Recent Commits on RepositoryTests.release.xcconfig */,
+				A7A361A63A480E1923EE5552 /* Pods-Recent Commits on RepositoryUITests.debug.xcconfig */,
+				FE562E56E04D205824ACBB4A /* Pods-Recent Commits on RepositoryUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 102013F22042082C004CA5AB /* Build configuration list for PBXNativeTarget "Recent Commits on Repository" */;
 			buildPhases = (
+				E296C93ED0AA9C4AAF5C7DE6 /* [CP] Check Pods Manifest.lock */,
 				102013C62042082B004CA5AB /* Sources */,
 				102013C72042082B004CA5AB /* Frameworks */,
 				102013C82042082B004CA5AB /* Resources */,
+				5E075F4ED1D1BE2991B7ECBC /* [CP] Embed Pods Frameworks */,
+				7D2E525CE88162AF53BB9E5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 102013F52042082C004CA5AB /* Build configuration list for PBXNativeTarget "Recent Commits on RepositoryTests" */;
 			buildPhases = (
+				623483A3D6C802EF7790856E /* [CP] Check Pods Manifest.lock */,
 				102013DA2042082B004CA5AB /* Sources */,
 				102013DB2042082B004CA5AB /* Frameworks */,
 				102013DC2042082B004CA5AB /* Resources */,
+				48ABFE2D315A4FBDE22B8211 /* [CP] Embed Pods Frameworks */,
+				6762B45DD980C00C3608352B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +322,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 102013F82042082C004CA5AB /* Build configuration list for PBXNativeTarget "Recent Commits on RepositoryUITests" */;
 			buildPhases = (
+				4B527C6EC6DCAC54742F3B09 /* [CP] Check Pods Manifest.lock */,
 				102013E52042082C004CA5AB /* Sources */,
 				102013E62042082C004CA5AB /* Frameworks */,
 				102013E72042082C004CA5AB /* Resources */,
+				65F525A3349CD5B08954601E /* [CP] Embed Pods Frameworks */,
+				93ED25D32502D51DF222DEF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,12 +412,202 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		48ABFE2D315A4FBDE22B8211 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Recent Commits on RepositoryTests/Pods-Recent Commits on RepositoryTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recent Commits on RepositoryTests/Pods-Recent Commits on RepositoryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B527C6EC6DCAC54742F3B09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Recent Commits on RepositoryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E075F4ED1D1BE2991B7ECBC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Recent Commits on Repository/Pods-Recent Commits on Repository-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recent Commits on Repository/Pods-Recent Commits on Repository-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		623483A3D6C802EF7790856E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Recent Commits on RepositoryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65F525A3349CD5B08954601E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recent Commits on RepositoryUITests/Pods-Recent Commits on RepositoryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6762B45DD980C00C3608352B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recent Commits on RepositoryTests/Pods-Recent Commits on RepositoryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D2E525CE88162AF53BB9E5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recent Commits on Repository/Pods-Recent Commits on Repository-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93ED25D32502D51DF222DEF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recent Commits on RepositoryUITests/Pods-Recent Commits on RepositoryUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E296C93ED0AA9C4AAF5C7DE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Recent Commits on Repository-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		102013C62042082B004CA5AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				102013D02042082B004CA5AB /* ViewController.swift in Sources */,
+				1020140420420E69004CA5AB /* GithbuRepositoriesRouter.swift in Sources */,
+				1020141F20422EA7004CA5AB /* SwiftinjectSetup+Storyboard.swift in Sources */,
+				1020141920422133004CA5AB /* CommitViewModel.swift in Sources */,
+				1020140C2042198E004CA5AB /* SearchResult.swift in Sources */,
+				102013FF20420B11004CA5AB /* ServiceError.swift in Sources */,
+				1020140A20421647004CA5AB /* Committer.swift in Sources */,
+				1020140820421639004CA5AB /* Commit.swift in Sources */,
+				102013D02042082B004CA5AB /* SearchViewController.swift in Sources */,
+				1020141620421D2B004CA5AB /* SearchViewModel.swift in Sources */,
+				10A7D6852042385900DB2618 /* UIImageView+AlamofireImage.swift in Sources */,
+				1020140120420BD1004CA5AB /* GithubClient.swift in Sources */,
+				1020141020421AA0004CA5AB /* SearchService.swift in Sources */,
+				1020141B204222AC004CA5AB /* CommitService.swift in Sources */,
+				1020141D204228A2004CA5AB /* SearchResultTableViewCell.swift in Sources */,
+				1020141220421ACC004CA5AB /* Service.swift in Sources */,
+				102013FD2042098E004CA5AB /* NetClient.swift in Sources */,
 				102013CE2042082B004CA5AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +772,7 @@
 		};
 		102013F32042082C004CA5AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2B10401EA4F1AD798EA88E4 /* Pods-Recent Commits on Repository.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -431,13 +780,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "eleazar0425.Recent-Commits-on-Repository";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		102013F42042082C004CA5AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DF95EE542EDA2D6625F90F8 /* Pods-Recent Commits on Repository.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -445,13 +795,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "eleazar0425.Recent-Commits-on-Repository";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		102013F62042082C004CA5AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41E48F7BAC2C28FCC615B923 /* Pods-Recent Commits on RepositoryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +819,7 @@
 		};
 		102013F72042082C004CA5AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1012B7F25F208DD0592D578 /* Pods-Recent Commits on RepositoryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +836,7 @@
 		};
 		102013F92042082C004CA5AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A361A63A480E1923EE5552 /* Pods-Recent Commits on RepositoryUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +852,7 @@
 		};
 		102013FA2042082C004CA5AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE562E56E04D205824ACBB4A /* Pods-Recent Commits on RepositoryUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

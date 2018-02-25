@@ -7,3 +7,27 @@
 //
 
 import Foundation
+import BrightFutures
+import Alamofire
+
+class SearchService : Service {
+    var client: NetClient
+    required init(client: NetClient) {
+        self.client = client
+    }
+    
+    func search(query: String) -> Future<[SearchResult], ServiceError> {
+        let promise = Promise<[SearchResult], ServiceError>()
+        
+        client.request(GithbuRepositoriesRouter.search(query: query))
+            .onSuccess { data in
+                let profiles = data["items"].arrayValue.flatMap({
+                    SearchResult(withJSON: $0)
+                })
+                promise.success(profiles)
+            }.onFailure { error in
+                promise.failure(error)
+        }
+        return promise.future
+    }
+}

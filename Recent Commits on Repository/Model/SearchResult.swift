@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import SwiftyJSON
+
+class SearchResult {
+    var repositoryName: String
+    var ownerName: String
+    var ownerAvatarLink: String
+    var description: String
+    
+    init(withJSON json: JSON) {
+        self.repositoryName = json["name"].stringValue
+        self.ownerName = json["owner"]["login"].stringValue
+        self.ownerAvatarLink = json["owner"]["avatar_url"].stringValue
+        self.description = json["description"].stringValue
+    }
+}

@@ -7,3 +7,27 @@
 //
 
 import Foundation
+import Alamofire
+import BrightFutures
+import SwiftyJSON
+
+class GithubClient : NetClient {
+    
+    var request: DataRequest?
+    
+    func request(_ route: URLRequestConvertible) -> Future<JSON, ServiceError> {
+        request?.cancel() //by now, always cancel previous request
+        let promise = Promise<JSON, ServiceError>()
+        request = Alamofire.request(route)
+                    .validate()
+                    .responseJSON { json in
+                        guard let data = json.value else {
+                            promise.failure(ServiceError.unknownError(message: "Something happened"))
+                            return
+                        }
+                        
+                        promise.success(JSON(data))
+                    }
+        return promise.future
+    }
+}

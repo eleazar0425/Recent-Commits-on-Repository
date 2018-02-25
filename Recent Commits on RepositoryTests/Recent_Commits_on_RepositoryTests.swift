@@ -8,6 +8,9 @@
 
 import XCTest
 @testable import Recent_Commits_on_Repository
+@testable import Alamofire
+@testable import BrightFutures
+@testable import SwiftyJSON
 
 class Recent_Commits_on_RepositoryTests: XCTestCase {
     

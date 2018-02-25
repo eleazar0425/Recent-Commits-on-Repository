@@ -10,6 +10,8 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    static let GITHUB_API_REST = "https://api.github.com"
 
     var window: UIWindow?
 

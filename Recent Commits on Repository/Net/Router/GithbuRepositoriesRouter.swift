@@ -9,14 +9,17 @@
 import Foundation
 import Alamofire
 
-enum SearchRepositoriesRouter : URLRequestConvertible {
+enum GithbuRepositoriesRouter : URLRequestConvertible {
     
     case search(query: String)
+    case getCommits(owner: String, repository: String)
     
     var path: String {
         switch  self {
         case .search(_):
             return "/search/repositories"
+        case .getCommits(let owner, let repository):
+            return "/repos/\(owner)/\(repository)/commits"
         }
     }
     
@@ -24,6 +27,8 @@ enum SearchRepositoriesRouter : URLRequestConvertible {
         switch  self {
         case .search(let query):
             return ["q":query]
+        default:
+            return [:]
         }
     }
     
@@ -31,12 +36,12 @@ enum SearchRepositoriesRouter : URLRequestConvertible {
         return .get
     }
     
-    
     func asURLRequest() throws -> URLRequest {
         let url = try AppDelegate.GITHUB_API_REST.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
-        return URLEncoding.default.encode(URLRequestConvertible, with: <#T##Parameters?#>)
+        urlRequest.httpMethod = method.rawValue
+        
+        return try URLEncoding.default.encode(urlRequest, with: params)
     }
-    
 }

@@ -8,8 +8,7 @@
 
 import Foundation
 
-enum Error : Error {
-    typealias RawValue = <#type#>
-    
+enum ServiceError: Error {
     case networkError(message: String)
+    case unknownError(message: String)
 }

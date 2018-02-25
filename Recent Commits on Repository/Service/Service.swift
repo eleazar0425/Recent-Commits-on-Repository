@@ -7,3 +7,6 @@
 //
 
 import Foundation
+protocol Service {
+    init(client: NetClient)
+}

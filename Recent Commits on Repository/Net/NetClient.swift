@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import Alamofire
+import BrightFutures
+import SwiftyJSON
+
+protocol NetClient{
+    func request(_ route: URLRequestConvertible) -> Future<JSON, ServiceError>
+}

@@ -7,3 +7,24 @@
 //
 
 import Foundation
+import SwinjectStoryboard
+
+extension SwinjectStoryboard {
+    class func setup() {
+        defaultContainer.register(NetClient.self){
+            _ in GithubClient()
+        }.inObjectScope(.container)
+        
+        defaultContainer.register(SearchService.self){ r in
+            SearchService(client: r.resolve(NetClient.self)!)
+        }.inObjectScope(.container)
+        
+        defaultContainer.register(SearchViewModelType.self){ r in
+            SearchViewModel(service: r.resolve(SearchService.self)!)
+        }.inObjectScope(.container)
+        
+        defaultContainer.storyboardInitCompleted(SearchViewController.self) { (r, vc) in
+            vc.searchViewModel = r.resolve(SearchViewModelType.self)!
+        }
+    }
+}
