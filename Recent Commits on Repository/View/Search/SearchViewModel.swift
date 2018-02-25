@@ -17,8 +17,6 @@ protocol SearchViewModelType {
     
     var query: String {get set}
     
-    func performSearch()
-    
     var delegate: SearchRepositoriesDelegate? {get set }
 }
 
@@ -27,7 +25,7 @@ class SearchViewModel : SearchViewModelType {
     
     var results : [SearchResult] = [] {//0 results by default
         didSet{
-            delegate?.searchResultsDidChanged()
+            delegate?.searchResultsDidChanged() //notify
         }
     }
     
@@ -37,6 +35,8 @@ class SearchViewModel : SearchViewModelType {
         didSet {
             if query == "" {
                 results = []
+            }else {
+                performSearch()
             }
         }
     }
@@ -45,7 +45,7 @@ class SearchViewModel : SearchViewModelType {
         self.searchService = service
     }
     
-    func performSearch() {
+    private func performSearch() {
         searchService.search(query: self.query)
             .onSuccess { results in
                 self.results = results

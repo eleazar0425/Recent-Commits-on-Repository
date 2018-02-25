@@ -50,11 +50,11 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchViewModel?.query = searchText
-        searchViewModel?.performSearch()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchViewModel?.performSearch()
+        searchBar.resignFirstResponder()
+        searchBar.endEditing(true)
     }
 }
 
