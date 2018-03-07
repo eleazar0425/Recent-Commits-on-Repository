@@ -17,7 +17,7 @@ class CommitsOnRepositoryViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var result: SearchResult?
-    var commitViewModel: CommitViewModelType?
+    var commitViewModel: CommitViewModelType!
     
     override func viewDidLoad() {
         
@@ -33,9 +33,9 @@ class CommitsOnRepositoryViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        commitViewModel?.delegate = self
+        commitViewModel.delegate = self
         
-        commitViewModel?.getRepositoryCommits(repositoryOwner: result.ownerName, repositoryName: result.repositoryName)
+        commitViewModel.getRepositoryCommits(repositoryOwner: result.ownerName, repositoryName: result.repositoryName)
         
     }
 }
@@ -56,16 +56,13 @@ extension CommitsOnRepositoryViewController: UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (commitViewModel?.commits.count)!
+        return commitViewModel.commits.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let viewCell = tableView.dequeueReusableCell(withIdentifier: "commitViewCellIdentifier") as! CommitTableViewCell
-        guard let commits = commitViewModel?.commits else {
-            return viewCell
-        }
         
-        let commit = commits[indexPath.row]
+        let commit = commitViewModel.commits[indexPath.row]
         
         viewCell.commiterNameLabel.text = commit.committer.username
         viewCell.commitMessageLabel.text = commit.message

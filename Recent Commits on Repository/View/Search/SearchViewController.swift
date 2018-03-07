@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var searchViewModel: SearchViewModelType?
+    var searchViewModel: SearchViewModelType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class SearchViewController: UIViewController {
         
         searchBar.delegate = self
         
-        searchViewModel?.delegate = self
+        searchViewModel.delegate = self
         
         searchBar.becomeFirstResponder()
     }
@@ -37,10 +37,7 @@ class SearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showRepositoryDetailSegue" {
             let selectedRow = tableView.indexPathForSelectedRow?.row
-            guard let results = searchViewModel?.results, let row = selectedRow else {
-                return
-            }
-            let result = results[row]
+            let result = searchViewModel.results[selectedRow!]
             let vc = segue.destination as! CommitsOnRepositoryViewController
             vc.result = result
         }
@@ -68,14 +65,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let viewCell = tableView.dequeueReusableCell(withIdentifier: "searchResultVieCell", for: indexPath) as! SearchResultTableViewCell
         
-        guard let result = searchViewModel?.results[indexPath.row] else {
-            return viewCell
-        }
-
+        let result = searchViewModel.results[indexPath.row]
+        
         viewCell.ownerNameLabel.text = result.ownerName
         viewCell.repositoryNameLabel.text = result.repositoryName
         viewCell.descriptionLabel.text = result.description
         viewCell.avatar.setImage(withPath: result.ownerAvatarLink)
+        
         return viewCell
     }
     
@@ -84,10 +80,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (searchViewModel?.results.count)!
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Todo
+        return searchViewModel.results.count
     }
 }

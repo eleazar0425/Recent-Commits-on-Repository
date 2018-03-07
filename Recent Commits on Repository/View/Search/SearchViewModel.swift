@@ -33,11 +33,14 @@ class SearchViewModel : SearchViewModelType {
     
     var query: String = "" {
         didSet {
-            if query == "" {
-                results = []
-            }else {
-                performSearch()
-            }
+            //wait 200 milliseconds before doing the query
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200), execute: {
+                if self.query == "" {
+                    self.results = []
+                }else {
+                    self.performSearch()
+                }
+            })
         }
     }
     
