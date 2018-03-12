@@ -16,15 +16,10 @@ class CommitsOnRepositoryViewController: UIViewController {
     @IBOutlet weak var repositoryNameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var result: SearchResult?
+    var result: SearchResult!
     var commitViewModel: CommitViewModelType!
     
     override func viewDidLoad() {
-        
-        guard let result = result else {
-            return
-        }
-        
         onwerAvatar.setImage(withPath: result.ownerAvatarLink)
         ownerNameLabel.text = result.ownerName
         repositoryNameLabel.text = result.repositoryName
@@ -36,7 +31,6 @@ class CommitsOnRepositoryViewController: UIViewController {
         commitViewModel.delegate = self
         
         commitViewModel.getRepositoryCommits(repositoryOwner: result.ownerName, repositoryName: result.repositoryName)
-        
     }
 }
 

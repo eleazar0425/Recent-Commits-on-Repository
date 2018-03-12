@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="euB-ot-m2i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,17 +14,17 @@
         <!--Find a repository-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="Recent_Commits_on_Repository" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="SearchViewController" customModule="Recent_Commits_on_Repository" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="n26-Qa-k8T">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4jW-5m-JdC">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchResultVieCell" id="yDT-KP-xcM" customClass="SearchResultTableViewCell" customModule="Recent_Commits_on_Repository" customModuleProvider="target">
@@ -88,7 +88,6 @@
                                             <outlet property="descriptionLabel" destination="hHF-G2-JaJ" id="55e-dw-kgt"/>
                                             <outlet property="ownerNameLabel" destination="tUQ-iU-T52" id="Xfw-kA-uMe"/>
                                             <outlet property="repositoryNameLabel" destination="b6T-tT-KWu" id="2fy-YT-c2F"/>
-                                            <segue destination="cHa-ZH-rcb" kind="show" identifier="showRepositoryDetailSegue" id="qVS-Ho-XUB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -110,29 +109,30 @@
                     <connections>
                         <outlet property="searchBar" destination="n26-Qa-k8T" id="KZH-GZ-bEa"/>
                         <outlet property="tableView" destination="4jW-5m-JdC" id="Qe7-ey-Liz"/>
+                        <segue destination="cHa-ZH-rcb" kind="show" id="Qkg-v1-ckG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="237.59999999999999" y="102.99850074962519"/>
+            <point key="canvasLocation" x="-140" y="132"/>
         </scene>
         <!--Commits On Repository View Controller-->
         <scene sceneID="b9v-DB-Xr4">
             <objects>
-                <viewController id="cHa-ZH-rcb" customClass="CommitsOnRepositoryViewController" customModule="Recent_Commits_on_Repository" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommitsViewController" id="cHa-ZH-rcb" customClass="CommitsOnRepositoryViewController" customModule="Recent_Commits_on_Repository" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eoQ-Gi-p15">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5np-L2-ARB">
-                                <rect key="frame" x="112" y="64" width="150" height="150"/>
+                                <rect key="frame" x="112" y="20" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Fx9-Pg-cGX"/>
                                     <constraint firstAttribute="width" constant="150" id="Le2-e5-wWr"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repository name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZg-wg-1vr">
-                                <rect key="frame" x="0.0" y="222" width="375" height="24"/>
+                                <rect key="frame" x="0.0" y="178" width="375" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="M0h-Kn-4rn"/>
                                 </constraints>
@@ -141,7 +141,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aMh-n6-VPb">
-                                <rect key="frame" x="0.0" y="341" width="375" height="326"/>
+                                <rect key="frame" x="0.0" y="297" width="375" height="370"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commitViewCellIdentifier" rowHeight="60" id="zBm-1k-2ky" customClass="CommitTableViewCell" customModule="Recent_Commits_on_Repository" customModuleProvider="target">
@@ -198,7 +198,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ownername" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtP-FE-QhJ">
-                                <rect key="frame" x="0.0" y="254" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="210" width="375" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="dvR-M6-UUb"/>
                                 </constraints>
@@ -207,7 +207,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk1-t7-Zm4">
-                                <rect key="frame" x="0.0" y="283" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="239" width="375" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="HMH-Ep-vfR"/>
                                 </constraints>
@@ -216,7 +216,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent commits: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDr-aW-Qbr">
-                                <rect key="frame" x="0.0" y="312" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="268" width="375" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Div-X2-7WX"/>
                                 </constraints>
@@ -258,23 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ9-Xf-AdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.60000000000002" y="102.99850074962519"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="BK9-ex-gZr">
-            <objects>
-                <navigationController id="euB-ot-m2i" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Txg-ZR-H1Q">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qq6-jn-gZf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="79x-XH-hmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-516" y="103"/>
+            <point key="canvasLocation" x="689" y="132"/>
         </scene>
     </scenes>
 </document>

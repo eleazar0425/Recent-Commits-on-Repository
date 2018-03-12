@@ -16,6 +16,8 @@ class SearchViewController: UIViewController {
     
     var searchViewModel: SearchViewModelType!
     
+    var wireFrame: SearchWireFrame!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,15 +34,6 @@ class SearchViewController: UIViewController {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         searchBar.resignFirstResponder()
         searchBar.endEditing(true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showRepositoryDetailSegue" {
-            let selectedRow = tableView.indexPathForSelectedRow?.row
-            let result = searchViewModel.results[selectedRow!]
-            let vc = segue.destination as! CommitsOnRepositoryViewController
-            vc.result = result
-        }
     }
 }
 
@@ -81,5 +74,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchViewModel.results.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let result = searchViewModel.results[indexPath.row]
+        wireFrame.presentCommitsInterface(result: result)
     }
 }

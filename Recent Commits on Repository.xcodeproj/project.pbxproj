@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0BEB59CCBE6EA994231A2353 /* Pods_Recent_Commits_on_Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC82EB2EABD8FF8968FE4AA0 /* Pods_Recent_Commits_on_Repository.framework */; };
+		10185220205601D1001B56D9 /* RootWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018521F205601D1001B56D9 /* RootWireFrame.swift */; };
+		10185223205604CE001B56D9 /* SearchWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10185222205604CE001B56D9 /* SearchWireFrame.swift */; };
 		102013CE2042082B004CA5AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102013CD2042082B004CA5AB /* AppDelegate.swift */; };
 		102013D02042082B004CA5AB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102013CF2042082B004CA5AB /* SearchViewController.swift */; };
 		102013D32042082B004CA5AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102013D12042082B004CA5AB /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1018521F205601D1001B56D9 /* RootWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireFrame.swift; sourceTree = "<group>"; };
+		10185222205604CE001B56D9 /* SearchWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireFrame.swift; sourceTree = "<group>"; };
 		102013CA2042082B004CA5AB /* Recent Commits on Repository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recent Commits on Repository.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		102013CD2042082B004CA5AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		102013CF2042082B004CA5AB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 			children = (
 				1020141720422119004CA5AB /* Commit */,
 				1020141420421D1E004CA5AB /* Search */,
+				1018521F205601D1001B56D9 /* RootWireFrame.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				1020141520421D2B004CA5AB /* SearchViewModel.swift */,
 				1020141C204228A2004CA5AB /* SearchResultTableViewCell.swift */,
 				102013CF2042082B004CA5AB /* SearchViewController.swift */,
+				10185222205604CE001B56D9 /* SearchWireFrame.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -602,6 +608,7 @@
 				1020140420420E69004CA5AB /* GithbuRepositoriesRouter.swift in Sources */,
 				1020141F20422EA7004CA5AB /* SwiftinjectSetup+Storyboard.swift in Sources */,
 				1020141920422133004CA5AB /* CommitViewModel.swift in Sources */,
+				10185223205604CE001B56D9 /* SearchWireFrame.swift in Sources */,
 				1020140C2042198E004CA5AB /* SearchResult.swift in Sources */,
 				102013FF20420B11004CA5AB /* ServiceError.swift in Sources */,
 				1020140A20421647004CA5AB /* Committer.swift in Sources */,
@@ -615,6 +622,7 @@
 				1020141020421AA0004CA5AB /* SearchService.swift in Sources */,
 				1020141B204222AC004CA5AB /* CommitService.swift in Sources */,
 				1020141D204228A2004CA5AB /* SearchResultTableViewCell.swift in Sources */,
+				10185220205601D1001B56D9 /* RootWireFrame.swift in Sources */,
 				1020141220421ACC004CA5AB /* Service.swift in Sources */,
 				102013FD2042098E004CA5AB /* NetClient.swift in Sources */,
 				102013CE2042082B004CA5AB /* AppDelegate.swift in Sources */,

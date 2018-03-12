@@ -31,8 +31,16 @@ extension SwinjectStoryboard {
             SearchViewModel(service: r.resolve(SearchService.self)!)
         }.inObjectScope(.container)
         
+        defaultContainer.register(SearchWireFrame.self) { r in
+            SearchWireFrame()
+        }
+        
         defaultContainer.storyboardInitCompleted(SearchViewController.self) { (r, vc) in
             vc.searchViewModel = r.resolve(SearchViewModelType.self)!
+            let wireFrame = r.resolve(SearchWireFrame.self)!
+            wireFrame.searchViewController = vc
+            vc.wireFrame = wireFrame
+            
         }
         
         defaultContainer.storyboardInitCompleted(CommitsOnRepositoryViewController.self) { (r,vc) in
